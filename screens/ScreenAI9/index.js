@@ -1,13 +1,17 @@
+import { useNavigation } from "@react-navigation/native";
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
 const UserProfileScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <Text style={styles.title}>User Profile</Text>
       <TextInput style={styles.input} placeholder="Name" />
       <TextInput style={styles.input} placeholder="Phone Number" />
       <TextInput style={styles.input} placeholder="Address" />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("Untitled10");
+    }}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
