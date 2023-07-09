@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 const PaymentScreen = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <Text style={styles.amountText}>Amount to be Paid:</Text>
       <Text style={styles.amount}>$100.00</Text>
@@ -19,7 +21,9 @@ const PaymentScreen = () => {
           <Text style={styles.cardText}>Credit Card Option 2</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.payButton}>
+      <TouchableOpacity style={styles.payButton} onPress={() => {
+      navigation.navigate("");
+    }}>
         <Text style={styles.payButtonText}>Pay Now</Text>
       </TouchableOpacity>
     </View>;
