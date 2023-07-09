@@ -24,7 +24,9 @@ const Screen = () => {
         <Text style={styles.description}>Restaurant Description</Text>
       </View>
       <View style={styles.section2}>
-        <TouchableOpacity style={styles.cartButton}>
+        <TouchableOpacity style={styles.cartButton} onPress={() => {
+        navigation.navigate("ScreenAI15");
+      }}>
           <Text style={styles.cartButtonText}>Cart</Text>
         </TouchableOpacity>
         <ScrollView style={styles.menuItemsContainer}>
