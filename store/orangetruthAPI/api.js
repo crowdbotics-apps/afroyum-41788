@@ -1,6 +1,6 @@
 import axios from "axios"
 const orangetruthAPI = axios.create({
-  baseURL: "https://orange-truth-41788.botics.co",
+  baseURL: "https://afroyum-41788.botics.co",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_docs_schema_retrieve(payload) {
